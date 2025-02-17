@@ -1,0 +1,10 @@
+- name : Basic System Setup
+- hosts : Web
+- remote_user: yan
+- become true
+- tasks:
+- -name: create user
+- user:
+- name: coucou
+- state :present
+- groups: yan
